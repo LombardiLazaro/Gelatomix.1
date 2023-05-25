@@ -85,3 +85,19 @@ loadMoreBtn3.onclick = () => {
     }
 
 }
+
+let loadMoreBtn4 = document.querySelector('#load-more-4');
+let currentItem4 = 4;
+
+loadMoreBtn4.onclick = () => {
+    let boxes = [...document.querySelectorAll('.box-container-4 .box-4')];
+    for(var i = currentItem4; i < currentItem4 + 4; i++) {
+        boxes[i].style.display = 'inline-block';
+    }
+
+    currentItem4 += 4;
+    if (currentItem4 >= boxes.length) {
+        loadMoreBtn4.style.display = 'none'
+    }
+
+}
